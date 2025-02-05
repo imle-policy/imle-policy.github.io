@@ -1,6 +1,6 @@
-# SayPlan
+# IMLE Policy
 
-This is the repository that contains source code for the [SayPlan website](https://sayplan.github.io).
+This is the repository that contains source code for the [IMLE Policy website](https://imle-policy.github.io).
 
 
 
