@@ -84,24 +84,24 @@
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
-              <!-- <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+              <span class="link-block">
+                <a href="https://www.roboticsproceedings.org/rss21/p158.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
                   <span>Paper</span>
                 </a>
-              </span> -->
-              <span class="link-block">
+              </span>
+              <!-- <span class="link-block">
                 <a href="https://arxiv.org/pdf/2502.12371"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
-                  <span>arXiv</span>
+                  <span>Paper</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Video Link. -->
               <!-- <span class="link-block">
                 <a href="#"
@@ -114,14 +114,26 @@
               </span> -->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="#"
+                <a href="https://github.com/krishanrana/imle_policy"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code (Coming Soon)</span>
+                  <span>Code</span>
                   </a>
               </span>
+
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/krishanrana/imle_policy/resolve/main/datasets.zip"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-database"></i>
+                  </span>
+                  <span>Dataset</span>
+                  </a>
+              </span>
+
+
               <!-- Dataset Link. -->
               <span class="link-block">
                 <a href="#"
@@ -142,17 +154,20 @@
 
 
 
+
+
+
   
-<!-- <section class="section" style="padding-top: 8px; margin-top: 0;">
+<section class="section" style="padding-top: 3px; margin-top: 0;">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full-width has-text-centered">
-        <p>&#128204 <strong>Conference on Robot Learning (CoRL), 2023</strong> <span style="color:red; font-weight:bold;">(Oral Talk)</span></p>
-        <p>&#128204 <strong>Robotics: Science and Systems (RSS) Robot Representations For Scene Understanding, Reasoning and Planning, 2023</strong> <span style="color:red; font-weight:bold;">(Oral Talk)</span></p>
+        <!-- <p>&#128204 <strong>Conference on Robot Learning (CoRL), 2023</strong> <span style="color:red; font-weight:bold;">(Oral Talk)</span></p> -->
+        <p>&#128204 <strong>Accepted at Robotics Science and Systems (RSS), 2025</strong> <span style="color:red; font-weight:bold;"></span></p>
       </div>
     </div>
   </div>
-</section> -->
+</section>
   
 
 <!-- <section class="hero teaser">
@@ -232,7 +247,7 @@
             <p><strong>IMLE Policy Overview</strong> 
               a) Training: The policy takes in a sequence of past observations 
               <span>&#x1D4AA;</span> and <em>m</em> sampled latents <strong>z</strong> for which the policy generates 
-              <em>m</em> sequences of predicted actions <span>&#x1D4A0;</span>. Generated trajectories that lie 
+              <em>m</em> sequences of predicted actions. Generated trajectories that lie 
               within the rejection sampling threshold <strong>&epsilon;</strong> are rejected. From the remaining 
               trajectories, the nearest-neighbour to the ground truth trajectory is selected for training. 
               We minimise the distance between this trajectory and the ground truth trajectory to optimise 
@@ -250,7 +265,7 @@
 
 
 
-        <section class="hero teaser">
+        <!-- <section class="hero teaser">
           <div class="container is-max-desktop">
             <div class="hero-body" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
               <video id="teaser" autoplay controls muted loop playsinline style="max-width: 100%; height: auto;">
@@ -262,11 +277,54 @@
               </h2>
             </div>
           </div>
+        </section> -->
+
+
+        <section class="hero teaser">
+
+          
+          <div class="container is-max-desktop">
+            <div class="hero-body">
+
+              <h2 class="subtitle has-text-centered">
+                <br/>
+                <span class="dnerf">IMLE Policy</span> can learn behaviours from as little as 17 demonstrations consistently outperforming all baselines, capturing complex multi-modal action distributions with a single inference step.
+              </h2>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; text-align: center;">
+                
+                <div>
+                  <video autoplay controls muted loop playsinline style="max-width: 100%; height: auto;">
+                    <source src="Images/pusht_17.mp4" type="video/mp4">
+                  </video>
+                </div>
+                
+                <div>
+                  <video autoplay controls muted loop playsinline style="max-width: 100%; height: auto;">
+                    <source src="Images/pusht_35.mp4" type="video/mp4">
+                  </video>
+                </div>
+                
+                <div>
+                  <video autoplay controls muted loop playsinline style="max-width: 100%; height: auto;">
+                    <source src="Images/shoe_rack_17.mp4" type="video/mp4">
+                  </video>
+                </div>
+                
+                <div>
+                  <video autoplay controls muted loop playsinline style="max-width: 100%; height: auto;">
+                    <source src="Images/shoe_rack_35.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
-        
+
+
 
         
-        <br/>
+
         <!--/ Interpolating. -->
 
         <!-- Re-rendering. -->
@@ -352,26 +410,30 @@
           </div>
         </div>
       </section> -->
+
+
+
+      <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+            <h2 class="title">BibTeX</h2>
+            <pre><code>
+            @inproceedings{rana2025imle, 
+            title     = {IMLE Policy: Fast and Sample Efficient Visuomotor Policy Learning via Implicit Maximum Likelihood Estimation}, 
+            author    = {Rana, Krishan and Lee, Robert and Pershouse, David and Suenderhauf, Niko}, 
+            booktitle = {Proceedings of Robotics: Science and Systems (RSS)}, 
+            year      = {2025}
+          }</code></pre>
+          </div>
+        </section>
     
 
   </div>
 </section>
 
 
-<!-- <section class="section" id="BibTeX">
-<div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>
-      @inproceedings{
-        rana2023sayplan,
-        title={SayPlan: Grounding Large Language Models using 3D Scene Graphs for Scalable Task Planning},
-        author={Krishan Rana and Jesse Haviland and Sourav Garg and Jad Abou-Chakra and Ian Reid and Niko Suenderhauf},
-        booktitle={7th Annual Conference on Robot Learning},
-        year={2023},
-        url={https://openreview.net/forum?id=wMpOMO0Ss7a}
-      }</code></pre>
-  </div>
-</section> -->
+
+
+
 
 <footer class="footer">
   <div class="container">
@@ -385,7 +447,7 @@
       <div class="column is-8">
 <!--         <div class="institute-logos has-text-centered"> -->
         <div class="content has-text-centered">
-          <!-- <img src="./Images/qcr.png" alt="Institute 1" style="width:200px; margin:20px;"> -->
+          <img src="./Images/qcr.png" alt="Institute 1" style="width:200px; margin:20px;">
           <!-- <img src="./Images/uoa.png" alt="Institute 2" style="width:200px; margin:20px;"> -->
           <!-- <img src="./Images/data61.png" alt="Institute 3" style="width:200px; margin:20px;"> -->
         </div>
@@ -393,6 +455,8 @@
     </div>
 
 
+
+      
       <div class="columns is-centered">
       <div class="column is-8">
        <div class="content has-text-centered"> 
